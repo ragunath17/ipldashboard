@@ -1,0 +1,73 @@
+/* Write your CSS here */
+.home-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png');
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  }
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.ipl-logo {
+  height: 40px;
+  width: 25px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .ipl-logo {
+    height: 60px;
+    width: 30px;
+  }
+}
+
+.heading {
+  font-family: 'Bree Serif';
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 48px;
+  }
+}
+
+.unordered-list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.unordered-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .unordered-list {
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

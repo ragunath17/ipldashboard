@@ -1,0 +1,93 @@
+/* Write your CSS here */
+.match-card-list-item {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 20px;
+  max-width: 40%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .match-card-list-item {
+    width: 30%;
+    margin: 20px;
+    min-height: 70vh;
+  }
+}
+
+.list-items-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  padding: 8px;
+  padding-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-items-card {
+    padding: 15px;
+  }
+}
+
+.competing-team-logo {
+  height: 50px;
+  width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .competing-team-logo {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.first-innings {
+  font-family: 'Bree Serif';
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .first-innings {
+    font-size: 22px;
+  }
+}
+
+.result {
+  font-family: 'Bree Serif';
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .result {
+    font-size: 22px;
+  }
+}
+
+.match-status {
+  font-family: 'Bree Serif';
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .match-status {
+    font-size: 22px;
+  }
+}
+
+.won {
+  color: #18ed66;
+}
+
+.lost {
+  color: #e31a1a;
+}

@@ -1,0 +1,17 @@
+/* Write your CSS here */
+.not-found-card {
+  font-family: 'Bree Serif';
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .not-found-card {
+    font-size: 32px;
+  }
+}

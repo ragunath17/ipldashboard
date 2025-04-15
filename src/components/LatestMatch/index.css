@@ -1,0 +1,150 @@
+/* Write your CSS here */
+.latest-match-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-details-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-info {
+    width: 30%;
+  }
+}
+
+.team-info-competing-team {
+  font-family: 'Bree Serif';
+  font-size: 22px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .team-info-competing-team {
+    font-size: 46px;
+    font-weight: 500;
+  }
+}
+
+.team-info-date {
+  font-size: 18px;
+  font-family: 'Bree Serif';
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .team-info-date {
+    font-size: 24px;
+    line-height: 2px;
+  }
+}
+
+.team-info-venue {
+  font-family: 'Bree Serif';
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .team-info-venue {
+    font-size: 22px;
+  }
+}
+
+.team-info-result {
+  font-family: 'Bree Serif';
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .team-info-result {
+    font-size: 22px;
+  }
+}
+
+.competing-team-logo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .competing-team-logo-card {
+    width: 40%;
+  }
+}
+
+.competing-team-img {
+  height: 90px;
+  width: 90px;
+}
+
+@media screen and (min-width: 768px) {
+  .competing-team-img {
+    height: 210px;
+    width: 210px;
+  }
+}
+
+.team-details-card {
+  font-family: 'Bree Serif';
+  font-weight: 500;
+  color: #ffffff;
+  padding: 10px;
+  border-top: 2px solid #475569;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .team-details-card {
+    width: 30%;
+    text-align: right;
+    border-top: 0px none;
+  }
+}
+
+.team-details {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .team-details {
+    font-size: 24px;
+  }
+}
+
+.team-details-info {
+  font-family: 'Bree Serif';
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .team-details-info {
+    font-size: 16px;
+  }
+}

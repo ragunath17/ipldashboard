@@ -1,0 +1,103 @@
+/* Write your CSS here */
+.team-data-loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.team-matches-container {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-matches-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+.CSK {
+  background-color: #f7db00;
+  min-height: 100vh;
+}
+
+.RCB {
+  background-color: #d91c1f;
+  min-height: 100vh;
+}
+
+.KKR {
+  background-color: #0f172a;
+  min-height: 100vh;
+}
+
+.KXP {
+  background-color: #a4261d;
+  min-height: 100vh;
+}
+
+.RR {
+  background-color: #da237b;
+  min-height: 100vh;
+}
+
+.MI {
+  background-color: #13418b;
+  min-height: 100vh;
+}
+
+.SH {
+  background-color: #f26d22;
+  min-height: 100vh;
+}
+
+.DC {
+  background-color: #4f5db0;
+  min-height: 100vh;
+}
+
+.team-banner-img {
+  width: 100%;
+  padding: 10px;
+}
+
+.latest-matches-container {
+  min-height: 40vh;
+  background-color: #1e293b;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-matches-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+  }
+}
+
+.latest-match-heading {
+  font-family: 'Bree Serif';
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+.match-card-unordered-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
