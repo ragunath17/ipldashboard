@@ -101,3 +101,32 @@
   flex-wrap: wrap;
   padding-left: 0px;
 }
+
+.back-btn {
+  height: 40px;
+  width: 100px;
+  border: 0px none;
+  cursor: pointer;
+  outline: none;
+  background-color: #c3e2fa;
+  border-radius: 8px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #037bfc;
+}
+
+.piechart-responsive-container {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 769px) {
+  .piechart-responsive-container {
+    height: 400px;
+  }
+}

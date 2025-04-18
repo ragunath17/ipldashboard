@@ -1,6 +1,8 @@
 // Write your code here
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
+import {Link} from 'react-router-dom'
+import {PieChart, Pie, Legend} from 'recharts'
 import LatestMatches from '../LatestMatch'
 import MatchCard from '../MatchCard'
 import './index.css'
@@ -23,6 +25,7 @@ class TeamMatches extends Component {
     latestMatchDetailsList: [],
     isLoading: true,
     backgroundClassName: '',
+    statistics: {won: 0, loss: 0, drawn: 0},
   }
 
   componentDidMount() {
@@ -61,6 +64,10 @@ class TeamMatches extends Component {
     console.log(getBackgroundClassName)
 
     const latestMatchData = data.latest_match_details
+    const status = recentMatchesData.map(each => each.matchStatus)
+
+    console.log(status)
+    this.updateMatchStats(status)
 
     this.setState({
       recentMatchesDataList: recentMatchesData,
@@ -69,27 +76,17 @@ class TeamMatches extends Component {
       isLoading: false,
     })
   }
-  /*
-  convertCamelCase = () => {
-    const {latestMatchDetailsList} = this.state
-    const camelCaseConverted = latestMatchDetailsList.map(eachDetails => ({
-      umpires: eachDetails.umpires,
-      result: eachDetails.result,
-      manOfTheMatch: eachDetails.man_of_the_match,
-      id: eachDetails.id,
-      date: eachDetails.date,
-      venue: eachDetails.venue,
-      competingTeam: eachDetails.competing_team,
-      competingTeamLogo: eachDetails.competing_team_logo,
-      firstInnings: eachDetails.first_innings,
-      secondInnings: eachDetails.second_innings,
-      matchStatus: eachDetails.match_status,
-    }))
-    this.setState({latestMatchDetailsList: camelCaseConverted})
-    console.log(latestMatchDetailsList)
-    return {camelCaseConverted}
+
+  updateMatchStats(result) {
+    const {statistics} = this.state
+    result.forEach(status => {
+      if (status === 'Won') statistics.won += 1
+      else if (status === 'Lost') statistics.loss += 1
+      else statistics.drawn += 1
+    })
+
+    this.setState({statistics})
   }
-*/
 
   renderTeamData = () => {
     const {
@@ -97,7 +94,23 @@ class TeamMatches extends Component {
       teamBanner,
       latestMatchDetailsList,
       backgroundClassName,
+      statistics,
     } = this.state
+    console.log(statistics)
+    const data = [
+      {
+        name: 'Won',
+        value: statistics.won,
+      },
+      {
+        name: 'Lost',
+        value: statistics.loss,
+      },
+      {
+        name: 'Drawn',
+        value: statistics.drawn,
+      },
+    ]
 
     return (
       <div className={`team-matches-container ${backgroundClassName}`}>
@@ -116,6 +129,30 @@ class TeamMatches extends Component {
             <MatchCard key={eachItem.id} recentMatches={eachItem} />
           ))}
         </ul>
+
+        <PieChart
+          className="piechart-responsive-container"
+          height={500}
+          width={500}
+        >
+          <Pie
+            data={data}
+            dataKey="value"
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            outerRadius={90}
+            fill="#8884d8"
+            label
+          />
+          <Legend />
+        </PieChart>
+
+        <Link to="/">
+          <button type="button" className="back-btn">
+            Back
+          </button>
+        </Link>
       </div>
     )
   }
